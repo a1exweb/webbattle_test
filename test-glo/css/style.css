@@ -428,6 +428,7 @@ body {
 
   .card-full__rating {
     margin-bottom: 20px;
+    margin-top: 20px
   }
 
   .card-full__card-footer_leftside {
