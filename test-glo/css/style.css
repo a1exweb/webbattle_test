@@ -466,6 +466,11 @@ body {
     max-width: 350px;
   }
 
+  .card__image-wrap {
+    max-height: 250px;
+    overflow: hidden;
+  }
+
   .card-box {
     width: 100%;
   }
