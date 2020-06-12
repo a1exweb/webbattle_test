@@ -1,0 +1,246 @@
+.container
+    max-width: 1125px
+    margin: auto
+.title
+    text-transform: uppercase
+    font-size: 36px
+.rating
+    display: flex
+    &__icon
+        margin-right: 4px
+        &:last-child
+            margin-right: 0
+.icon
+    display: inline-flex
+    width: 14px
+    height: 14px
+    &_star
+        width: 6px
+        height: 6px
+        background: url('../img/other-packages/icons/star.svg') no-repeat center
+    &_location
+        background: url('../img/other-packages/icons/map-pin.svg') no-repeat center
+    &_user
+        background: url('../img/other-packages/icons/user.svg') no-repeat center
+    &_home
+        background: url('../img/other-packages/icons/home.svg') no-repeat center
+.card
+    border-radius: 8px
+    background-color: $bg-card
+    color: $white
+    &-list
+        list-style: none
+        font-size: 12px
+        &__text
+            margin-left: 6px
+        &__item
+            display: flex
+            align-items: center
+            &:nth-child(1)
+                margin-bottom: 12px
+            &:nth-child(2)
+                margin-bottom: 12px
+        &__icon
+            margin-left: 2px
+            margin-right: 15px
+    &-offer
+        position: absolute
+        left: 0
+        display: inline-flex
+        color: $white
+        background-color: $primary
+        padding: 3px
+        border-radius: 0px 4px 4px 0px
+    &-full
+        position: relative
+        display: flex
+        max-width: 730px
+        &__leftside
+            line-height: 0
+        &__rating
+            margin-top: 47px
+        &__image
+            border-radius: 8px 0px 0px 8px
+            height: 100%
+            max-height: 500px
+        &__card
+            &-main
+                margin-left: 45px
+                margin-bottom: 55px
+                padding-right: 20px
+            &-footer
+                &_rightside
+                    margin-right: 20px
+                &_leftside
+                    margin-left: 47px
+                    margin-top: -16px
+            &-offer
+                top: 28px
+                padding-left: 13px
+                font-size: 12px
+                line-height: 22px
+                margin-top: 1px
+                min-height: 28px
+                min-width: 95px
+            &-title
+                margin-top: 9px
+                margin-bottom: 29px
+            &-description
+                max-width: 300px
+                margin-bottom: 45px
+    &-mini
+        position: relative
+        min-height: 500px
+        &__image
+            border-radius: 8px 8px 0 0
+        &__card
+            &-offer
+                top: 27px
+                min-height: 18px
+                padding-left: 10px
+                line-height: 13px
+                min-width: 60px
+                font-size: 8px
+            &-main
+                margin-left: 33px
+                margin-top: 30px
+            &-list
+                &-icon
+                    margin-left: 1px
+                    margin-right: 12.7px
+            &-title
+                margin-bottom: 25px
+            &-footer
+                margin-top: 14px
+                &_leftside
+                    margin-top: 12px
+                    margin-left: 33px
+                &_rightside
+                    margin-right: 20px
+
+    &-title
+        font-size: 18px
+    &-description
+        font-size: 14px
+        line-height: 160.6%
+    &-footer
+        display: flex
+        justify-content: space-between
+        &_leftside
+            display: flex
+            flex-direction: column
+        &__button
+            min-width: 120px
+            min-height: 40px
+            border-radius: 2px
+    &__price-tag
+        margin-top: 8px
+.sale
+    display: inline-flex
+    position: relative
+    font-size: 14px
+    width: max-content
+    &::after
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $white
+.price-tag
+    font-size: 24px
+.button
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    padding: 5px
+    font-size: 14px
+    background-color: $primary
+    color: $white
+    transition: .5s
+    &:hover
+        background-color: lighten($primary, 7%)
+    &:active
+        background-color: darken($primary, 7%)
+@media screen and ( max-width: 1200px )
+    .card
+        display: flex
+        width: 100%
+        max-width: unset
+        min-height: unset
+        align-items: center
+        &-full
+            &__rating
+                margin-bottom: 20px
+            &__card
+                &-footer
+                    &_leftside
+                        margin-top: 8px
+                        line-height: 10px
+        &-mini
+            &__image
+                border-radius: 8px 0 0 8px
+            &__card
+                &-footer
+                    &_leftside
+                        margin-top: 36px
+                        line-height: 10px
+        &-box
+            width: 55%
+    html
+        line-height: 0    
+@media screen and ( max-width: 800px )
+    .card
+        flex-direction: column
+        width: unset
+        margin: auto
+        padding-bottom: 20px
+        margin-bottom: 20px
+        max-width: 350px
+        &-box
+            width: 100%
+        &-full
+            &__card
+                &-main
+                    margin-left: 0
+                &-footer
+                    &_leftside
+                        margin-left: 0
+                    &_rightside
+                        margin-right: 0
+            &__image
+                border-radius: 8px 8px 0 0
+        &-mini
+            &__card
+                &-main
+                    margin-left: 15px
+                &-footer
+                    &_leftside
+                        margin-left: 15px
+            &__image
+                border-radius: 8px 8px 0 0
+
+    .other-packages
+        &__wrap
+            flex-direction: column
+@media screen and ( max-width: 400px )
+    .other-packages
+        &__title
+            margin: 35px auto
+    .title
+        font-size: 25px
+    .card
+        max-width: 300px
+        &-full
+            &__card
+                &-main
+                    padding-right: 0
+        &-description
+            max-width: 280px
+@media screen and ( max-device-width : 1024px )
+    .button
+        &:hover
+            background-color: $primary
+    
